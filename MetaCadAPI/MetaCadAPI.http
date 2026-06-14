@@ -1,6 +1,0 @@
-@MetaCadAPI_HostAddress = http://localhost:5233
-
-GET {{MetaCadAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
