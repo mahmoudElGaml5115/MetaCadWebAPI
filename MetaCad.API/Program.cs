@@ -1,3 +1,5 @@
+using Application;
+using Persistence;
 
 namespace MetaCad.API
 {
@@ -5,9 +7,11 @@ namespace MetaCad.API
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            var builder = WebApplication.CreateBuilder(args); 
+            builder.Services.AddApplication(); 
+            builder.Services.AddPersistence(builder.Configuration);
 
-            // Add services to the container.
+            // Add services to the container. 
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

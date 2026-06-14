@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MetaCad.Core\MetaCad.Core.csproj" />
+  </ItemGroup>
+
 </Project>
