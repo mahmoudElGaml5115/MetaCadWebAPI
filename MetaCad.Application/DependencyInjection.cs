@@ -1,4 +1,6 @@
 ﻿using FluentValidation;
+using MetaCad.Application.IServices;
+using MetaCad.Application.Services;
 using MetaCad.Application.Validators.Auth;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
@@ -14,19 +16,13 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application
+namespace Infrastructure
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddApplication(this IServiceCollection services)
-        {
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(
-                                       Assembly.GetExecutingAssembly(),                 // Current API assembly
-                                       typeof(AssemblyReference).Assembly              // Application assembly
-
-                                       ));
-            //TODO: this registered but not wxcuted till implement mediatorR Validation Behavior  
-            services.AddValidatorsFromAssemblyContaining<RegisterModelValidator>();  
+        public static IServiceCollection AddInfrastructure(this IServiceCollection services)
+        {  
+            services.AddScoped<IEmailService, SmtpEmailService>();  
             return services;
         }
     }

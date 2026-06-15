@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Persistence.Identity
+namespace MetaCad.Core.Entities.Identity
 {
     public class AppRole : IdentityRole
     {

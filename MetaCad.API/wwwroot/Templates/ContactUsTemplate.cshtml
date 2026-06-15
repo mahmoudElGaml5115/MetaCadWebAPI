@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>رسالة تواصل جديدة</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .header { 
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+            .header h1 {
+                margin: 0;
+                font-size: 22px;
+            }
+
+        .content {
+            padding: 28px;
+            color: #333333;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .info-box {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        .info-item {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #6b7280;
+            font-weight: bold;
+        }
+
+        .message-box {
+            background-color: #ffffff;
+            border: 1px dashed #d1d5db;
+            border-radius: 6px;
+            padding: 16px;
+            margin-top: 16px;
+            white-space: pre-line;
+        }
+
+        .btn-wrapper {
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 26px;
+            background-color: #2563eb;
+            color: #ffffff !important;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        .footer {
+            padding: 16px;
+            text-align: center;
+            background-color: #f9fafb;
+            color: #6b7280;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <table role="presentation">
+        <tr>
+            <td align="center" style="padding: 40px 12px;">
+                <table class="container" role="presentation">
+
+                    <!-- Header -->
+                    <tr>
+                        <td class="header">
+                            <h1>📩 رسالة تواصل جديدة</h1>
+                        </td>
+                    </tr>
+
+                    <!-- Content -->
+                    <tr>
+                        <td class="content"> 
+
+                            <p><strong>تم استلام رسالة جديدة:</strong></p> 
+                            <div class="info-box">
+                                <div class="info-item">
+                                    <span class="label">الاسم:</span> {{Name}}
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">كود الدولة:</span> {{PhoneCode}}
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">رقم الهاتف:</span> {{PhoneNumber}} 
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">البريد الإلكتروني:</span> {{Email}}
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">تاريخ الإرسال:</span> {{CreatedAt}}
+                                </div>
+                            </div>
+
+                            <p><strong>نص الرسالة:</strong></p> 
+                            <div class="message-box">
+                                {{Message}}
+                            </div> 
+
+                            <p><strong>عنوان الموقع:</strong></p> 
+                            <div class="message-box">
+                                {{FrontendDomainUrl}}
+                            </div> 
+
+                              <br />
+                            <div style="text-align:center;">
+
+                                <a href="{{FrontendDomainUrl}}"
+                                   target="_blank"
+                                   style="
+                                           display:block;
+                                           padding:12px 20px;
+                                           margin-bottom:10px;
+                                           background:#2563eb;
+                                           color:#ffffff;
+                                           text-decoration:none;
+                                           font-weight:bold;
+                                           border-radius:6px;
+                                         ">
+                                    الذهاب للموقع
+                                </a>
+
+                                <a href="mailto:{{Email}}"
+                                   style="
+                                           display:block;
+                                           padding:12px 20px;
+                                           background:#16a34a;
+                                           color:#ffffff;
+                                           text-decoration:none;
+                                           font-weight:bold;
+                                           border-radius:6px;
+                                         ">
+                                    الرد على الرسالة
+                                </a>
+
+                            </div>
+
+
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td class="footer">
+                            © 2025 تطبيق بناء – جميع الحقوق محفوظة
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
