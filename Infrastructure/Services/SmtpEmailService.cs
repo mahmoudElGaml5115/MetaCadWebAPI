@@ -1,4 +1,5 @@
-﻿using MetaCad.Application.IServices;
+﻿using MetaCad.Application.DTOs;
+using MetaCad.Application.IServices;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -43,5 +44,6 @@ namespace Infrastructure.Services
 
             await client.SendMailAsync(mail, ct);
         }
+         
     }
 }
